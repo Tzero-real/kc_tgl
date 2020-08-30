@@ -1,0 +1,41 @@
+	<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/goback.png" bindtap="onback" />
+	</view>
+	<!-- 顶部右侧通告栏 -->
+	<view class="view_image_right">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/notice.png" bindtap="onNotice" />
+	</view>
+	<!-- 搜索框 -->
+<van-search
+  shape="round"
+  background="#4582FF"
+  placeholder="请输入高级/超级管理员密钥开启权限"
+	clearable
+	use-action-slot
+	use-left-icon-slot
+	bind:change="onChange"
+	bind:search="onSearch"
+>
+<van-icon name="manager" slot="left-icon" color="#4582FF" class="van-icon_manager"  size="18px" />
+<view slot="action" bind:tap="onSearch" class="view_search">GO！</view>
+</van-search>
+<!-- 工具栏 -->
+<van-grid column-num="2" icon-size="32px">
+  <van-grid-item icon="/images/search-o.png" text="高级搜索" badge="普通" bind:click="onsearch1" />
+		<van-grid-item icon="/images/staus-o.png" text="数据监控" badge="普通" bind:click="ondata" />
+  <van-grid-item icon="/images/excel-o.png" text="汇总表生成" badge="高级" bind:click="onExcel" />
+		<van-grid-item icon="/images/search-o.png" text="超级搜索" badge="高级" bind:click="onsearch2"	/>
+  <van-grid-item icon="/images/notice-o.png" text="通知发布" badge="超级" bind:click="onnoticeback" />
+	<van-grid-item icon="/images/component-o.png" text="组件自定义" badge="超级" bind:click="onComponent1" />
+  <van-grid-item icon="/images/people-o.png" text="人员管理" badge="危险" bind:click="onComponent2" />
+	<van-grid-item icon="/images/forward.png" text="敬请期待" badge="期待" bind:click="onForward" />
+</van-grid>
+<!-- 分割横线 -->
+<van-divider  contentPosition="center" customStyle="color: #A9A9A9	;border-color: #A9A9A9	;font-size: 10px;">没有更多功能了</van-divider>
+<!-- 版权信息 -->
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">科创中心收取系统</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">商务合作联系邮箱：tglstudio@163.com</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>

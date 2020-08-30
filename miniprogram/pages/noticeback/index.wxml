@@ -1,0 +1,51 @@
+	<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/goback.png" bindtap="onback" />
+	</view>
+<!-- 表单 -->
+<form bindsubmit="onSubmit">
+<van-cell-group>
+  <van-field
+		label="标题"		
+    placeholder="请输入通知标题"
+		name="title"
+		required
+		clearable
+  />
+	  <van-field
+		label="标签"		
+    placeholder="请输入通知的标签"
+		name="tag"
+		required
+		clearable
+  />
+	  <van-field
+    label="内容"
+    type="textarea"
+    placeholder="请输入通知具体内容"
+    autosize
+		required
+		name="notice"
+  />
+		<van-field
+    center
+		readonly
+    clearable
+    label="附件(选填)"
+    use-button-slot
+  >
+    <van-button slot="button" size="small" color="#4582FF" bind:click="onUp">上传附件</van-button>
+  </van-field>
+	</van-cell-group>
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9;font-size: 10px;">科创中心收取系统</van-divider>
+	<!-- 提交按钮 -->
+	<van-button class="button_submit" size="large" color="#4582FF" icon="passed" form-type="submit">提交</van-button>
+</form>
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9;font-size: 10px;">商务合作联系邮箱：tglstudio@163.com</van-divider>
+<!-- 版权信息 -->
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>
+

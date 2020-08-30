@@ -1,0 +1,39 @@
+	<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/goback.png" bindtap="onback" />
+	</view>
+	<!-- 表单 -->
+	<form bindsubmit="onSubmit">
+	<van-cell title="主要成员最小数">
+	<van-stepper value="{{ minstu }}" min="1" max="15" name="minstu" integer input-width="50px" button-size="32px" bind:change="onminstu" />
+	</van-cell>
+	<van-cell title="主要成员最大数">
+	<van-stepper value="{{ maxstu }}" min="1" max="15" name="maxstu" integer input-width="50px" button-size="32px" bind:change="onmaxstu" />
+		</van-cell>
+	<van-cell title="指导教师最小数">
+	<van-stepper value="{{ mintea }}" min="1" max="3" name="mintea" integer input-width="50px" button-size="32px" bind:change="onmintea" />
+	</van-cell>
+	<van-cell title="指导教师最大数">
+	<van-stepper value="{{ maxtea }}" min="1" max="3" name="maxtea" integer input-width="50px" button-size="32px" bind:change="onmaxtea" />
+	</van-cell>
+<van-cell-group>
+  <van-field
+		label="结束时间"		
+    placeholder="示例：2020-08-15 23:59:00(全英文)"
+		name="time"
+		required
+		clearable
+		value="{{time}}"
+  />
+</van-cell-group>
+	<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9;font-size: 10px;">科创中心收取系统</van-divider>
+	<!-- 提交按钮 -->
+	<van-button class="button_correct" size="large" color="#4582FF" icon="passed" form-type="submit">立即更新</van-button>
+	</form>
+	<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9;font-size: 10px;">商务合作联系邮箱：tglstudio@163.com</van-divider>
+<!-- 版权信息 -->
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>

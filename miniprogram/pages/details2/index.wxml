@@ -1,0 +1,310 @@
+	<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/goback.png" bindtap="onback" />
+	</view>
+
+<!-- 信息展示 -->
+<van-cell-group>
+  <van-field
+		label="项目名称"		
+		name="name"
+    value="{{tasks.name}}"
+		required
+		clearable
+		readonly
+  />
+	  <van-field
+		label="申请人"		
+		name="head"
+    value="{{tasks.head}}"
+		required
+		
+		readonly
+  />
+		<van-field
+		label="学号"		
+		name="headId"
+    value="{{tasks.headId}}"
+		required
+		
+		maxlength="12"
+		readonly
+  />
+		<van-field
+		label="班级"		
+		name="class"
+     value="{{tasks.class}}"
+		required
+		
+		readonly
+  />
+			<van-field
+		label="主要成员1"		
+		name="stu1"
+    value="{{tasks.stu[0]}}"
+		required
+		
+		readonly
+  />
+		<van-field
+		label="主要成员2"		
+		name="stu2"
+    value="{{tasks.stu[1]}}"
+		wx:if="{{showId>=2}}"
+		
+		required
+		readonly
+  />
+		<van-field
+		label="主要成员3"		
+		name="stu3"
+    value="{{tasks.stu[2]}}"
+		wx:if="{{showId>=3}}"
+		
+		required
+		readonly
+  />
+		<van-field
+		label="主要成员4"		
+		name="stu4"
+    value="{{tasks.stu[3]}}"
+		wx:if="{{showId>=4}}"
+		
+		required
+		readonly
+  />
+		<van-field
+		label="主要成员5"		
+		name="stu5"
+    value="{{tasks.stu[4]}}"
+		wx:if="{{showId>=5}}"
+		
+		required
+		readonly
+  />
+	<van-field
+		label="主要成员6"		
+		name="stu6"
+		value="{{tasks.stu[5]}}"
+		wx:if="{{showId>=6}}"
+		readonly
+		
+		required
+  />
+	      <van-field
+    label="主要成员7"   
+    name="stu7"
+		value="{{tasks.stu[6]}}"
+    wx:if="{{showId>=7}}"
+    readonly
+    
+		required
+  />
+      <van-field
+    label="主要成员8"   
+    name="stu8"
+		value="{{tasks.stu[7]}}"
+    wx:if="{{showId>=8}}"
+    disabled="{{cancorrect}}"
+    
+		required
+		readonly
+  />
+     <van-field
+    label="主要成员9"   
+    name="stu9"
+		value="{{tasks.stu[8]}}"
+    wx:if="{{showId>=9}}"
+		readonly
+    
+		required
+  />
+     <van-field
+    label="主要成员10"   
+    name="stu10"
+		value="{{tasks.stu[9]}}"
+    wx:if="{{showId>=10}}"
+    readonly
+    
+		required
+  />
+     <van-field
+    label="主要成员11"   
+    name="stu11"
+		value="{{tasks.stu[10]}}"
+    wx:if="{{showId>=11}}"
+    readonly
+    
+		required
+  />
+     <van-field
+    label="主要成员12"   
+		name="stu12"
+		value="{{tasks.stu[11]}}"
+    wx:if="{{showId>=12}}"
+    readonly
+    
+		required
+  />
+     <van-field
+    label="主要成员13"   
+    name="stu13"
+		value="{{tasks.stu[12]}}"
+    wx:if="{{showId>=13}}"
+    readonly
+    
+		required
+  />
+     <van-field
+    label="主要成员14"   
+    name="stu14"
+		value="{{tasks.stu[13]}}"
+    wx:if="{{showId>=14}}"
+    readonly
+    
+		required
+  />
+     <van-field
+    label="主要成员15"   
+    name="stu15"
+		value="{{tasks.stu[14]}}"
+    wx:if="{{showId>=15}}"
+    
+		required
+		readonly
+  />
+		<van-field
+		label="学院"
+		name="school"
+    value="{{tasks.school}}"
+		required
+		readonly
+  />
+		<van-field
+		label="专业"		
+		name="subject"
+    value="{{tasks.subject}}"
+		required
+		readonly
+  />
+  	<van-field
+		label="指导教师1"		
+		name="teacher1"
+    value="{{tasks.teacher[0]}}"
+		required
+    readonly
+  />
+		<van-field
+		label="职称1"		
+		name="teachertitle1"
+    value="{{tasks.teachertitle[0]}}"
+		required
+    readonly
+  />
+
+		<van-field
+		label="指导教师2"		
+		name="teacher2"
+    value="{{tasks.teacher[1]}}"
+    wx:if="{{showteacher>=2}}"
+		required
+		
+    readonly
+  />
+		<van-field
+		label="职称2"		
+		name="teachertitle2"
+    value="{{tasks.teachertitle[1]}}"
+    wx:if="{{showteacher>=2}}"
+		required
+		
+    readonly
+  />
+
+		<van-field
+		label="指导教师3"		
+		name="teacher3"
+    value="{{tasks.teacher[2]}}"
+    wx:if="{{showteacher>=3}}"
+		required
+		
+    readonly
+  />
+		<van-field
+		label="职称3"		
+		name="teachertitle3"
+    value="{{tasks.teachertitle[2]}}"
+    wx:if="{{showteacher>=3}}"
+		required
+		
+    readonly
+  />
+	<van-field
+    center
+		required
+		readonly
+		border="{{false}}"
+    label="{{title}}"
+    use-button-slot
+  >
+		<van-button slot="button" size="small" color="#4582FF" bind:click="onReview" >审核文件</van-button>
+  </van-field>
+
+	<van-field
+    center
+		readonly
+    use-button-slot
+  >
+		<van-button slot="button" size="small" color="#4582FF" bind:click="onDownload" >下载文件</van-button>
+  </van-field>
+  <van-field
+    label="留言"
+    type="textarea"
+    autosize
+		name="message"
+    value="{{tasks.message}}"
+		readonly
+  />
+	</van-cell-group>
+
+		<!-- 表单 -->
+   <form bindsubmit="onSubmit">
+	  <van-cell-group>
+	  <van-field
+    label="评语"
+    type="textarea"
+    placeholder="请输入评语（必填）"
+    autosize
+		name="correct"
+		required
+		clearable
+  />
+	<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9	;border-color: #A9A9A9	;font-size: 10px;"  >错误图片添加</van-divider>
+	<!-- 添加照片 -->
+<van-uploader file-list="{{ fileList }}" bind:after-read="afterRead"  multiple="{{ true }}" deletable="{{ false }}" class="button_correct" >
+  <van-button  size="large" icon="photo" color="#4582FF" >修改/添加图片</van-button>
+</van-uploader>
+	<view wx:for="{{delfile}}">
+  <van-image
+  width="100%"
+  height="20rem"
+  fit="fill"
+  src="{{item}}"
+	show-menu-by-longpress	
+/>
+</view>
+</van-cell-group>
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9;font-size: 10px;">科创中心收取系统</van-divider>
+	<!-- 提交按钮 -->
+	<van-button class="button_correct" size="large" type="primary" icon="passed"  bindtap="onSuccess">已通过</van-button>
+	<!-- 修改按钮 -->
+	<van-button class="button_correct" size="large" type="danger" icon="failure" form-type="submit" bindtap="onfail" >有错误</van-button>
+</form>
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9;font-size: 10px;">商务合作联系邮箱：tglstudio@163.com</van-divider>
+<!-- 版权信息 -->
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>

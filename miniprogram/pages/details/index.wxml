@@ -1,0 +1,389 @@
+	<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/goback.png" bindtap="onback"  wx:if="{{show}}" />
+	</view>
+	<!-- 顶部右侧通告栏 -->
+	<view class="view_image_right">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/notice.png" bindtap="onNotice"  wx:if="{{show}}" />
+	</view>
+
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/eye-left.png" bindtap="ongo"  wx:if="{{!show}}" />
+	</view>
+	<!-- 顶部右侧通告栏 -->
+	<view class="view_image_right">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/eye-right.png" bindtap="ongo"  wx:if="{{!show}}" />
+	</view>
+
+
+
+  <!-- 表单 -->
+<form bindsubmit="onSubmit" >
+<van-cell-group>
+  <van-field
+		label="项目名称"		
+    placeholder="请输入项目名称"
+		name="name"
+    value="{{tasks.name}}"
+		right-icon="question-o"
+		bind:click-icon="onQuestion"
+		required
+		clearable
+		disabled="{{cancorrect}}"
+  />
+	  <van-field
+		label="申请人"		
+    placeholder="请输入申请人姓名"
+		name="head"
+    value="{{tasks.head}}"
+		required
+		clearable
+		disabled="{{cancorrect}}"
+  />
+		<van-field
+		label="学号"		
+    placeholder="请输入申请人学号"
+		name="headId"
+    value="{{tasks.headId}}"
+		type="number"
+		required
+		clearable
+		maxlength="12"
+		disabled="{{cancorrect}}"
+  />
+		<van-field
+		label="班级"		
+    placeholder="请输入申请人所在班级"
+		name="class"
+     value="{{tasks.class}}"
+		required
+		clearable
+		disabled="{{cancorrect}}"
+  />
+			<van-field
+		label="主要成员1"		
+    placeholder="请输入成员1"
+		name="stu1"
+    value="{{tasks.stu[0]}}"
+		right-icon="add-o"
+		bind:click-icon="onPlus"
+		required
+		clearable
+		disabled="{{cancorrect}}"
+  />
+		<van-field
+		label="主要成员2"		
+    placeholder="请输入成员2"
+		name="stu2"
+    value="{{tasks.stu[1]}}"
+		right-icon="close"
+		bind:click-icon="onCut"
+		wx:if="{{showId>=2}}"
+		clearable
+		required
+		disabled="{{cancorrect}}"
+  />
+		<van-field
+		label="主要成员3"		
+    placeholder="请输入成员3"
+		name="stu3"
+    value="{{tasks.stu[2]}}"
+		right-icon="close"
+		bind:click-icon="onCut"
+		wx:if="{{showId>=3}}"
+		clearable
+		required
+		disabled="{{cancorrect}}"
+  />
+		<van-field
+		label="主要成员4"		
+    placeholder="请输入成员4"
+		name="stu4"
+    value="{{tasks.stu[3]}}"
+		right-icon="close"
+		bind:click-icon="onCut"
+		wx:if="{{showId>=4}}"
+		clearable
+		required
+		disabled="{{cancorrect}}"
+  />
+		<van-field
+		label="主要成员5"		
+    placeholder="请输入成员5"
+		name="stu5"
+    value="{{tasks.stu[4]}}"
+		right-icon="close"
+		bind:click-icon="onCut"
+		wx:if="{{showId>=5}}"
+		clearable
+		required
+		disabled="{{cancorrect}}"
+  />
+	<van-field
+		label="主要成员6"		
+    placeholder="请输入成员6（点击加号添加更多）"
+		name="stu6"
+		value="{{tasks.stu[5]}}"
+		right-icon="close"
+		bind:click-icon="onCut"
+		wx:if="{{showId>=6}}"
+		disabled="{{cancorrect}}"
+		clearable
+		required
+  />
+	      <van-field
+    label="主要成员7"   
+    placeholder="请输入成员7（点击加号添加更多）"
+    name="stu7"
+		value="{{tasks.stu[6]}}"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=7}}"
+    disabled="{{cancorrect}}"
+    clearable
+		required
+  />
+      <van-field
+    label="主要成员8"   
+    placeholder="请输入成员8（点击加号添加更多）"
+    name="stu8"
+		value="{{tasks.stu[7]}}"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=8}}"
+    disabled="{{cancorrect}}"
+    clearable
+		required
+  />
+     <van-field
+    label="主要成员9"   
+    placeholder="请输入成员9（点击加号添加更多）"
+    name="stu9"
+		value="{{tasks.stu[8]}}"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=9}}"
+    disabled="{{cancorrect}}"
+    clearable
+		required
+  />
+     <van-field
+    label="主要成员10"   
+    placeholder="请输入成员10（点击加号添加更多）"
+    name="stu10"
+		value="{{tasks.stu[9]}}"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=10}}"
+    disabled="{{cancorrect}}"
+    clearable
+		required
+  />
+     <van-field
+    label="主要成员11"   
+    placeholder="请输入成员11（点击加号添加更多）"
+    name="stu11"
+		value="{{tasks.stu[10]}}"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=11}}"
+    disabled="{{cancorrect}}"
+    clearable
+		required
+  />
+     <van-field
+    label="主要成员12"   
+    placeholder="请输入成员12（点击加号添加更多）"
+    name="stu12"
+		value="{{tasks.stu[11]}}"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=12}}"
+    disabled="{{cancorrect}}"
+    clearable
+		required
+  />
+     <van-field
+    label="主要成员13"   
+    placeholder="请输入成员13（点击加号添加更多）"
+    name="stu13"
+		value="{{tasks.stu[12]}}"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=13}}"
+    disabled="{{cancorrect}}"
+    clearable
+		required
+  />
+     <van-field
+    label="主要成员14"   
+    placeholder="请输入成员14（点击加号添加更多）"
+    name="stu14"
+		value="{{tasks.stu[13]}}"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=14}}"
+    disabled="{{cancorrect}}"
+    clearable
+		required
+  />
+     <van-field
+    label="主要成员15"   
+    placeholder="请输入成员15（点击加号添加更多）"
+    name="stu15"
+		value="{{tasks.stu[14]}}"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=15}}"
+    disabled="{{cancorrect}}"
+    clearable
+		required
+  />
+		<van-field
+		label="学院"		
+    placeholder="请输入申请人所在学院"
+		name="school"
+    value="{{tasks.school}}"
+		required
+		clearable
+		disabled="{{cancorrect}}"
+  />
+		<van-field
+		label="专业"		
+    placeholder="请输入申请人专业全称"
+		name="subject"
+    value="{{tasks.subject}}"
+		required
+		clearable
+		disabled="{{cancorrect}}"
+  />
+  		<van-field
+		label="指导教师1"		
+    placeholder="请输入指导教师1姓名"
+		name="teacher1"
+    value="{{tasks.teacher[0]}}"
+    right-icon="add-o"
+		bind:click-icon="onPlusTeach"
+		required
+		clearable
+    disabled="{{cancorrect}}"
+  />
+		<van-field
+		label="职称1"		
+    placeholder="请输入指导教师1职称"
+		name="teachertitle1"
+    value="{{tasks.teachertitle[0]}}"
+		required
+		clearable
+    disabled="{{cancorrect}}"
+  />
+
+		<van-field
+		label="指导教师2"		
+    placeholder="请输入指导教师2姓名"
+		name="teacher2"
+    value="{{tasks.teacher[1]}}"
+    right-icon="close"
+    bind:click-icon="onCutTeach"
+    wx:if="{{showteacher>=2}}"
+		required
+		clearable
+    disabled="{{cancorrect}}"
+  />
+		<van-field
+		label="职称2"		
+    placeholder="请输入指导教师2职称"
+		name="teachertitle2"
+    value="{{tasks.teachertitle[1]}}"
+    wx:if="{{showteacher>=2}}"
+		required
+		clearable
+    disabled="{{cancorrect}}"
+  />
+
+		<van-field
+		label="指导教师3"		
+    placeholder="请输入指导教师3姓名"
+		name="teacher3"
+    value="{{tasks.teacher[2]}}"
+    right-icon="close"
+    bind:click-icon="onCutTeach"
+    wx:if="{{showteacher>=3}}"
+		required
+		clearable
+    disabled="{{cancorrect}}"
+  />
+		<van-field
+		label="职称3"		
+    placeholder="请输入指导教师3职称"
+		name="teachertitle3"
+    value="{{tasks.teachertitle[2]}}"
+    wx:if="{{showteacher>=3}}"
+		required
+		clearable
+    disabled="{{cancorrect}}"
+  />
+
+	<van-field
+    center
+		required
+		readonly
+    clearable
+    label="{{title}}"
+    use-button-slot
+		disabled="{{cancorrect}}"
+  >
+    <van-button slot="button" size="small" color="#4582FF" bind:click="onUp" disabled="{{cancorrect}}">修改文件</van-button>
+  </van-field>
+  <van-field
+    label="留言"
+    type="textarea"
+    placeholder="请输入留言（选填）"
+    autosize
+		name="message"
+    value="{{tasks.message}}"
+		disabled="{{cancorrect}}"
+  />
+	  <van-field
+    label="评语"
+    type="textarea"
+    placeholder="请输入留言（选填）"
+    autosize
+		name="correct"
+    value="{{tasks.correct}}"
+		readonly
+		wx:if="{{tasks.correct}}"
+  />
+	<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9	;border-color: #A9A9A9	;font-size: 10px;" wx:if="{{fileIDList}}" >错误图片展示</van-divider>
+<!-- 图片展示 -->
+	<view wx:for="{{fileIDList}}">
+  <van-image
+  width="100%"
+  height="20rem"
+  fit="fill"
+  src="{{item}}"
+	show-menu-by-longpress
+  data-url="{{item}}"
+  bindtap="imageshow"	
+/>
+</view>
+</van-cell-group>
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9;font-size: 10px;">科创中心收取系统</van-divider>
+	<!-- 修改按钮 -->
+	<van-button class="button_correct" size="large" color="#4582FF" icon="completed"  wx:if="{{cancorrect}}" catchtap="onCorrect">修改</van-button>
+  <!-- 删除按钮 -->
+	<van-button class="button_correct" size="large" type="danger" icon="failure"  wx:if="{{cancorrect}}" catchtap="ondelate">删除</van-button>
+	<!-- 提交按钮 -->
+	<van-button class="button_correct" size="large" color="#4582FF" icon="passed" form-type="submit" wx:if="{{!cancorrect}}">提交</van-button>
+	<!-- 放弃按钮 -->
+	<van-button class="button_correct" size="large" color="#4582FF" icon="failure"  wx:if="{{!cancorrect}}" catchtap="onabandon">放弃修改</van-button>
+</form>
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9;font-size: 10px;">商务合作联系邮箱：tglstudio@163.com</van-divider>
+<!-- 版权信息 -->
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>

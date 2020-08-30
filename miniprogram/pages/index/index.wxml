@@ -1,0 +1,323 @@
+<!-- 登入按钮 -->
+<view class="view_getUserInfo" wx:if="{{!userInfo && openId}}">
+	<van-button class="button_getUserInfo" color="#4582FF" icon="close" size="large" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点我登入</van-button>
+	<image class="image_background"  src="../../images/background.jpg"></image>
+	<text class="text_footer">科创中心收取系统</text>
+	<text class="text_footer2">©版权所有：TGL工作室</text>
+</view>
+<!-- 遮罩 -->
+<block wx:else>
+	<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧头像 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="{{userInfo.avatarUrl}}" bindtap="onMe" />
+	</view>
+	<!-- 顶部右侧通告栏 -->
+	<view class="view_image_right">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/notice.png" bindtap="onNotice" />
+	</view>
+  <!-- 倒计时 -->
+  <van-count-down use-slot time="{{ time }}" bind:change="onChange" bind:finish="onfinish">
+  <!-- 滚动通知栏 -->
+  <van-notice-bar 
+  left-icon="volume-o"
+  color="white"
+  background="#4582FF"
+  scrollable
+  text="距离收取结束还剩：{{timeData.days}}天{{timeData.hours}}小时{{ timeData.minutes }}分钟{{ timeData.seconds }}秒" 
+  />
+</van-count-down>
+ 
+<!-- 表单 -->
+<form bindsubmit="onSubmit">
+<van-cell-group>
+  <van-field
+		label="项目名称"		
+    placeholder="请输入项目名称"
+		name="name"
+		right-icon="question-o"
+		bind:click-icon="onQuestion"
+		required
+		clearable
+  />
+	  <van-field
+		label="申请人"		
+    placeholder="请输入申请人姓名"
+		name="head"
+		required
+		clearable
+  />
+		<van-field
+		label="学号"		
+    placeholder="请输入申请人学号"
+		name="headId"
+		type="number"
+		required
+		clearable
+		bind:change="onheadId"
+		error-message="{{errorMessage}}"
+		maxlength="12"
+  />
+		<van-field
+		label="班级"		
+    placeholder="请输入申请人所在班级"
+		name="class"
+		required
+		clearable
+  />
+		<van-field
+		label="主要成员1"		
+    placeholder="请输入成员1（点击加号添加更多）"
+		name="stu1"
+		right-icon="add-o"
+		bind:click-icon="onPlus"
+		required
+		clearable
+  />
+		<van-field
+		label="主要成员2"		
+    placeholder="请输入成员2（点击加号添加更多）"
+		name="stu2"
+		right-icon="close"
+		bind:click-icon="onCut"
+		wx:if="{{showId>=2}}"
+		required
+		clearable
+  />
+		<van-field
+		label="主要成员3"		
+    placeholder="请输入成员3（点击加号添加更多）"
+		name="stu3"
+		right-icon="close"
+		bind:click-icon="onCut"
+		wx:if="{{showId>=3}}"
+		required
+		clearable
+  />
+		<van-field
+		label="主要成员4"		
+    placeholder="请输入成员4（点击加号添加更多）"
+		name="stu4"
+		right-icon="close"
+		bind:click-icon="onCut"
+		wx:if="{{showId>=4}}"
+		required
+		clearable
+  />
+		<van-field
+		label="主要成员5"		
+    placeholder="请输入成员5（点击加号添加更多）"
+		name="stu5"
+		right-icon="close"
+		bind:click-icon="onCut"
+		wx:if="{{showId>=5}}"
+		required
+		clearable
+  />
+			<van-field
+		label="主要成员6"		
+    placeholder="请输入成员6（点击加号添加更多）"
+		name="stu6"
+		right-icon="close"
+		bind:click-icon="onCut"
+		wx:if="{{showId>=6}}"
+		required
+		clearable
+  />
+	      <van-field
+    label="主要成员7"   
+    placeholder="请输入成员7（点击加号添加更多）"
+    name="stu7"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=7}}"
+    required
+    clearable
+  />
+      <van-field
+    label="主要成员8"   
+    placeholder="请输入成员8（点击加号添加更多）"
+    name="stu8"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=8}}"
+    required
+    clearable
+  />
+     <van-field
+    label="主要成员9"   
+    placeholder="请输入成员9（点击加号添加更多）"
+    name="stu9"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=9}}"
+    required
+    clearable
+  />
+     <van-field
+    label="主要成员10"   
+    placeholder="请输入成员10（点击加号添加更多）"
+    name="stu10"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=10}}"
+    required
+    clearable
+  />
+     <van-field
+    label="主要成员11"   
+    placeholder="请输入成员11（点击加号添加更多）"
+    name="stu11"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=11}}"
+    required
+    clearable
+  />
+     <van-field
+    label="主要成员12"   
+    placeholder="请输入成员12（点击加号添加更多）"
+    name="stu12"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=12}}"
+    required
+    clearable
+  />
+     <van-field
+    label="主要成员13"   
+    placeholder="请输入成员13（点击加号添加更多）"
+    name="stu13"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=13}}"
+    required
+    clearable
+  />
+     <van-field
+    label="主要成员14"   
+    placeholder="请输入成员14（点击加号添加更多）"
+    name="stu14"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=14}}"
+    required
+    clearable
+  />
+     <van-field
+    label="主要成员15"   
+    placeholder="请输入成员15（点击加号添加更多）"
+    name="stu15"
+    right-icon="close"
+    bind:click-icon="onCut"
+    wx:if="{{showId>=15}}"
+    required
+    clearable
+  />
+		<van-field
+		label="学院"		
+    placeholder="请输入申请人所在学院"
+		name="school"
+		required
+		clearable
+  />
+		<van-field
+		label="专业"		
+    placeholder="请输入申请人专业全称"
+		name="subject"
+		required
+		clearable
+  />
+		<van-field
+		label="指导教师1"		
+    placeholder="请输入指导教师1姓名"
+		name="teacher1"
+    right-icon="add-o"
+		bind:click-icon="onPlusTeach"
+		required
+		clearable
+  />
+		<van-field
+		label="职称1"		
+    placeholder="请输入指导教师1职称"
+		name="teachertitle1"
+		required
+		clearable
+  />
+
+		<van-field
+		label="指导教师2"		
+    placeholder="请输入指导教师2姓名"
+		name="teacher2"
+    right-icon="close"
+    bind:click-icon="onCutTeach"
+    wx:if="{{showteacher>=2}}"
+		required
+		clearable
+  />
+		<van-field
+		label="职称2"		
+    placeholder="请输入指导教师2职称"
+		name="teachertitle2"
+    wx:if="{{showteacher>=2}}"
+		required
+		clearable
+  />
+
+		<van-field
+		label="指导教师3"		
+    placeholder="请输入指导教师3姓名"
+		name="teacher3"
+    right-icon="close"
+    bind:click-icon="onCutTeach"
+    wx:if="{{showteacher>=3}}"
+		required
+		clearable
+  />
+		<van-field
+		label="职称3"		
+    placeholder="请输入指导教师3职称"
+		name="teachertitle3"
+    wx:if="{{showteacher>=3}}"
+		required
+		clearable
+  />
+
+	<van-field
+    center
+		required
+		readonly
+    clearable
+    label="{{title}}"
+    use-button-slot
+  >
+    <van-button slot="button" size="small" color="#4582FF" bind:click="onUp">上传文件</van-button>
+  </van-field>
+		<van-field
+		label="校验码"
+    placeholder="请自己编写6位校验码（用于查看项目）"
+		name="code"
+		required
+		clearable
+		maxlength="6"
+  />
+  <van-field
+    label="留言"
+    type="textarea"
+    placeholder="请输入留言（选填）"
+    autosize
+		name="message"
+  />
+</van-cell-group>
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9;font-size: 10px;">科创中心收取系统</van-divider>
+	<!-- 提交按钮 -->
+	<van-button class="button_submit" size="large" color="#4582FF" icon="passed" form-type="submit">提交</van-button>
+</form>
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: #A9A9A9;font-size: 10px;">商务合作联系邮箱：tglstudio@163.com</van-divider>
+<!-- 版权信息 -->
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>
+
+</block>

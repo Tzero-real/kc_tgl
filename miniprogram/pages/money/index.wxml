@@ -1,0 +1,27 @@
+	<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/goback.png" bindtap="onback" />
+	</view>
+
+<!-- 打赏图片 -->
+<van-image
+  width="750rpx"
+  height="750rpx"
+  fit="fill"
+  src="cloud://tglstudio-key.7467-tglstudio-key-1301127223/ban/moneycode.png"
+	show-menu-by-longpress	
+ />
+ 
+
+<!-- 分割横线 -->
+<van-divider  contentPosition="center" customStyle="color: #A9A9A9	;border-color: #A9A9A9	;font-size: 10px;">感谢打赏,ღ( ´･ᴗ･` )比心</van-divider>
+<!-- 激励 -->
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">您的付出，掷地有声！</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">每7个工作日我们会更新特别鸣谢榜单！</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">需要展示真实名字的请打赏时备注哦！</text>
+<!-- 版权信息 -->
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">科创中心收取系统</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">商务合作联系邮箱：tglstudio@163.com</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>

@@ -1,0 +1,47 @@
+	<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/goback.png" bindtap="onback" />
+	</view>
+	<!-- 搜索框 -->
+	<van-search
+  shape="round"
+  background="#4582FF"
+  placeholder="请输入姓名/班级进行查询"
+	clearable
+	use-action-slot
+	use-left-icon-slot
+	bind:change="onChange"
+	bind:search="onSearch"
+>
+<van-icon name="bars" slot="left-icon" color="#4582FF" class="van-icon_bars"  size="18px" bindtap="onchoose"/>
+<view slot="action" bind:tap="onSearch" class="view_search">查询</view>
+</van-search>
+
+<!-- 选择器 -->
+<van-action-sheet show="{{ showpicker }}" title="选择查询条件"  bind:close="onClose"	>
+<van-picker columns="{{ columns }}" bind:change="onpicker" />
+</van-action-sheet>
+<!-- 列表：展示总体 -->
+<van-cell-group wx:if="{{index==1}}">
+  <van-cell title="班级:{{value}}" value="数量:{{tasks.length}}" clickable bind:click="onCopy" />
+</van-cell-group>
+<!-- 列表：展示具体 -->
+<van-cell-group wx:for="{{tasks}}" wx:key="_id"> 
+<navigator url="/pages/details2/index?id={{item._id}}&name={{name}}">
+<van-cell value="点击查看"  is-link border >
+	<view slot="title">
+    <view class="van-cell-text">{{item.name}}</view>
+    <van-tag type="{{item.tagType}}">{{item.tag}}</van-tag>
+  </view>
+</van-cell>
+</navigator>
+</van-cell-group>
+
+<!-- 分割横线 -->
+<van-divider  contentPosition="center" customStyle="color: #A9A9A9	;border-color: #A9A9A9	;font-size: 10px;">没有更多信息了</van-divider>
+<!-- 版权信息 -->
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">科创中心收取系统</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">商务合作联系邮箱：tglstudio@163.com</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>

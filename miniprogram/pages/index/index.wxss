@@ -1,0 +1,71 @@
+.view_top {
+  position: relative;
+  width: 100%;
+  height: 275rpx;
+  background-color: #4582FF;
+}
+
+.view_image_left {
+  position: absolute;
+  z-index: 100;
+  top: 136rpx;
+  left: 42rpx;
+}
+
+.view_image_right {
+  position: absolute;
+  z-index: 100;
+  top: 136rpx;
+  right: 42rpx;
+}
+
+.view_getUserInfo {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.button_getUserInfo {
+  position: fixed;
+  height: 400rpx;
+  width: 400rpx !important;
+  top: 40vh;
+  display: flex;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+
+.image_background {
+  z-index: 1;
+  height: 100vh;
+  width: 100vh;
+}
+
+.text_footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  bottom: 10vh;
+  color:white ;
+}
+
+.text_footer2 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  bottom: 4vh;
+  color:white ;
+}
+
+.button_submit{
+  display:flex;
+  justify-content: center;
+  margin-top: 30rpx;
+}

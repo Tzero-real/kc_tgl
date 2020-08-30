@@ -1,0 +1,39 @@
+	<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/goback.png" bindtap="onback" />
+	</view>
+			<!-- 用学号搜校验码 -->
+<van-search
+  shape="round"
+  background="#4582FF"
+  placeholder="请输入学号或姓名进行查询(敏感操作)"
+	clearable
+	use-left-icon-slot
+	use-action-slot
+	bind:change="onChange"
+	bind:search="onSearch"
+	maxlength="12"
+>
+<van-icon name="bars" slot="left-icon" color="#4582FF" class="van-icon_bars"  size="18px" bindtap="onchoose"/>
+<view slot="action" bind:tap="onSearch" class="view_search">查询</view>
+</van-search>
+
+<!-- 选择器 -->
+<van-action-sheet show="{{ showpicker }}" title="选择查询条件"  bind:close="onClose"	>
+<van-picker columns="{{ columns }}" bind:change="onpicker" />
+</van-action-sheet>
+
+<!-- 列表 -->
+<van-cell-group wx:for="{{tasks}}" wx:key="_id">
+  <van-cell title="校验码:{{item.code}}" value="学号:{{item.headId}}" clickable bind:click="onCopy" data-index="{{item}}"	bindlongpress="ondelate" />
+</van-cell-group>
+
+<!-- 分割横线 -->
+<van-divider  contentPosition="center" customStyle="color: #A9A9A9	;border-color: #A9A9A9	;font-size: 10px;">没有更多信息了</van-divider>
+<!-- 版权信息 -->
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">科创中心收取系统</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">商务合作联系邮箱：tglstudio@163.com</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>
+

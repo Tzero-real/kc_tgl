@@ -1,0 +1,24 @@
+	<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/goback.png" bindtap="onback" />
+	</view>
+<!-- 通知信息 -->
+<van-cell-group wx:for="{{tasks}}" wx:key="_id"> 
+<navigator url="/pages/details3/index?id={{item._id}}&user={{identity}}">
+<van-cell value="{{item.date}}"  is-link border >
+	<view slot="title">
+    <view class="van-cell-text">{{item.title}}</view>
+    <van-tag type="primary">{{item.tag}}</van-tag>
+  </view>
+</van-cell>
+</navigator>
+</van-cell-group>
+<!-- 分割横线 -->
+<van-divider  contentPosition="center" customStyle="color: #A9A9A9	;border-color: #A9A9A9	;font-size: 10px;">没有更多信息了</van-divider>
+<!-- 版权信息 -->
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">科创中心收取系统</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">商务合作联系邮箱：tglstudio@163.com</text>
+<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>
+

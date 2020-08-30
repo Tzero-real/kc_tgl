@@ -1,0 +1,36 @@
+<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/goback.png" bindtap="onback" />
+	</view>
+<!-- 特别鸣谢 -->
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: white;font-size: 15px;">特别鸣谢（排名不分先后）</van-divider>
+<text class="text_award">马坤（指导教师）、魏文静（指导教师）、夏骏（科创分管主席）、董婉晴（科创部长）、宋行雨（学创分管主席）</text>
+<!-- 内测用户 -->
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: white;font-size: 15px;">内测用户（排名不分先后）</van-divider>
+<text class="text_award">李海英、汤建堂、高淼、庞博、林文滔、商庆龙、贾亦豪、刘振梅、若干未授权用户（联系开发者添加）</text>
+<!-- 公测 -->
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: white;font-size: 15px;">公测用户</van-divider>
+<text class="text_award">教育与心理科学学院科创中心全体人员、教育与心理科学学院各项目组成员</text>
+<!-- 重大bug提交 -->
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: white;font-size: 15px;">重大bug提交（排名不分先后）</van-divider>
+<text class="text_award">期待您的反馈！</text>
+<!-- 打赏 -->
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: white;font-size: 15px;">打赏支持</van-divider>
+<text class="text_award">每月7日将在通知发布名单和感谢，请打赏者自行查看，默认打赏者微信昵称，需要真名请备注，如有疑问，请联系开发者。</text>
+<!-- 开发团队 -->
+<!-- 分割横线 -->
+<van-divider contentPosition="center" customStyle="color: white;font-size: 15px;">开发团队</van-divider>
+<text class="text_award">Tzero/汤国龙（TGL工作室）</text>
+  <!-- 分割横线 -->
+<van-divider  contentPosition="center" customStyle="color: white	;border-color: white	;font-size: 10px;">没有更多信息了</van-divider>
+<!-- 版权信息 -->
+<text style="color:white; font-size:10px; display:flex;justify-content: center;">科创中心收取系统</text>
+<text style="color:white; font-size:10px; display:flex;justify-content: center;">商务合作联系邮箱：tglstudio@163.com</text>
+<text style="color:white; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>

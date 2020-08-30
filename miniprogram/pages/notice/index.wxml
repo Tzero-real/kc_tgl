@@ -1,0 +1,34 @@
+	<!-- 顶部 -->
+	<view class="view_top"></view>
+	<!-- 顶部左侧返回栏 -->
+	<view class="view_image_left">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/goback.png" bindtap="onback" />
+	</view>
+	<!-- 顶部右侧通告栏 -->
+	<view class="view_image_right">
+		<van-image round width="112rpx" height="112rpx" fit="cover" src="/images/money.png" bindtap="onMoney" />
+	</view>
+
+	<!-- 相关内容栏 -->
+	<van-cell title="通知" is-link value="了解更多！" icon="chat" bind:click="onnotice" />
+	<van-cell title="特别鸣谢" is-link value="您的付出，掷地有声！" icon="award" bind:click="onaward" />
+		<!-- 折叠面板 -->
+	<van-collapse value="{{ activeNames }}" bind:change="onChange" bind:open="onCopy2" accordion>
+		<van-collapse-item title="关于我们" name="1" icon="friends" value="Do what we want！">
+    	TGL工作室是由Tzero创办的一家综合类型的工作室，在这里一切皆就有可能，不论你想成为一名画家、舞蹈家、艺术家、秃头程序员...,我们这里欢迎任何对某种职业或爱好痴迷的人和一切奇思妙想。说不定这里就会成为你梦想的起点，Just do what we want! Come on！
+  	</van-collapse-item>
+		<van-collapse-item title="加入我们" name="2" icon="like" value="梦开始的地方">
+    	请将个人简历投至邮箱:tglstudio@163.com，我们将会在7个工作日做出回复。
+  	</van-collapse-item>
+  </van-collapse>
+	<van-cell title="反馈" is-link value="帮我变得更好" icon="service" bind:click="onfeedback" />
+	<van-cell title="后台" is-link value="非内部人员勿点" icon="eye" bind:click="onbackoffice" />
+  <van-cell title="开发者工具" is-link value="非内部人员勿点" icon="printer" bind:click="onCopy" />
+
+
+	<!-- 分割横线 -->
+	<van-divider contentPosition="center" customStyle="color: #A9A9A9	;border-color: #A9A9A9	;font-size: 10px;">没有更多信息了</van-divider>
+	<!-- 版权信息 -->
+	<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">科创中心收取系统</text>
+	<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">商务合作联系邮箱：tglstudio@163.com</text>
+	<text style="color:#A9A9A9; font-size:10px; display:flex;justify-content: center;">©版权所有：TGL工作室</text>
