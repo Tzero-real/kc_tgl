@@ -2,13 +2,13 @@
 科创中心微信小程序
 # 项目名称
 
-------
+
 
 校园简单易——科创中心智能收取系统
 
 # 项目介绍
 
-------
+
 
 1. 项目背景：像“创青春”“挑战杯”“科研立项”等国家一类赛事跟国家二类赛事以及相关社会上的各种赛事逐渐增多，各高校对赛事的注重程度不断提升，但是很多院校仍旧采用线下收取方式，项目计划书有一处错误就要全部重新打印，不仅打击了同学们做赛事的积极性，更浪费了资源，而且科创相关部门的审核与汇总工作也较难进行，费时费力，还容易出错，为此科创中心智能收取系统应运而生。
 
@@ -16,32 +16,32 @@
 
 # 项目效果截图
 
-------
 
-![](C:\Users\Tzero\Desktop\001.png)
 
-![](C:\Users\Tzero\Desktop\0002.png)
+![首页](C:\Users\Tzero\Desktop\001.png)
 
-![003](C:\Users\Tzero\Desktop\003.png)
+![后台首页](C:\Users\Tzero\Desktop\0002.png)
 
-![004](C:\Users\Tzero\Desktop\004.png)
+![后台首页2](C:\Users\Tzero\Desktop\003.png)
 
-![005](C:\Users\Tzero\Desktop\005.png)
+![后台控制台](C:\Users\Tzero\Desktop\004.png)
+
+![通知](C:\Users\Tzero\Desktop\005.png)
 
 # 项目体验小程序码
 
-------
 
-![](C:\Users\Tzero\Desktop\qrcode.jpg)
+
+![体验吗](C:\Users\Tzero\Desktop\qrcode.jpg)
 
 # 部署教程
 
-------
+
 
  参考[deployment.md](https://github.com/Tzero-real/kc_tgl/blob/master/deployment.md)部署文件 
 
 # 开源许可
 
-------
+
 
  本项目遵循 [Apache License 2.0协议](https://github.com/Tzero-real/kc_tgl/blob/master/LICENSE). 
