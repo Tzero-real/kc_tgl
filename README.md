@@ -18,21 +18,21 @@
 
 
 
-![首页](C:\Users\Tzero\Desktop\001.png)
+![首页](https://github.com/Tzero-real/image/blob/master/001.png)
 
-![后台首页](C:\Users\Tzero\Desktop\0002.png)
+![后台首页](https://github.com/Tzero-real/image/blob/master/0002.png)
 
-![后台首页2](C:\Users\Tzero\Desktop\003.png)
+![后台首页2](https://github.com/Tzero-real/image/blob/master/003.png)
 
-![后台控制台](C:\Users\Tzero\Desktop\004.png)
+![后台控制台](https://github.com/Tzero-real/image/blob/master/004.png)
 
-![通知](C:\Users\Tzero\Desktop\005.png)
+![通知](https://github.com/Tzero-real/image/blob/master/005.png)
 
 # 项目体验小程序码
 
 
 
-![体验吗](C:\Users\Tzero\Desktop\qrcode.jpg)
+![体验码](https://github.com/Tzero-real/image/blob/master/qrcode.jpg)
 
 # 部署教程
 
